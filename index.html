@@ -285,17 +285,19 @@
             // 步骤四: 发送请求
             ajax.send();
             } catch (err) {
-            $('#author').html('随心');
-            // 一开始默认给一个随机语句
-            randomIndex = Math.floor(data.length * Math.random());
-            randomText();
-            typing();
+                $('#author').html('随心');
+                // 一开始默认给一个随机语句
+                randomIndex = Math.floor(data.length * Math.random());
+                randomText();
+                typing();
             }
         }
 
         start();
     </script>
-
+    <!-- 页面点击小红心 -->
+    <script type="text/javascript" src="https://dolyw.gitee.io/reader/JS/love.js"></script>
+    <script type="text/javascript" src="https://dolyw.com/static/count.js"></script>
 </body>
 
 </html>
