@@ -8,6 +8,24 @@ body {
     margin: 0
 }
 
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 1000px;
+    z-index: -10;
+    zoom: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+    opacity: 0.8;
+    filter: alpha(opacity = 80);
+}
+
 main {
     display: block
 }
@@ -901,6 +919,59 @@ a.nya-btn:hover {
 }
 
 .navbar header .subtitle i {
+    font-size: 20px;
+    font-size: 1.25rem;
+    margin-right: .3125rem
+}
+
+.navbar .head {
+    width: 100%;
+    height: 130px;
+    height: 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.navbar .head .login-info {
+    color: #2b8fdc
+}
+
+.navbar .head .title {
+    margin-bottom: .3125rem;
+    display: flex;
+    align-items: center
+}
+
+.navbar .head .title,
+.navbar .head .title a {
+    color: var(--t1);
+    cursor: pointer
+}
+
+.navbar .head .title a:hover {
+    text-decoration: none
+}
+
+.navbar .head .title i {
+    margin-left: .375rem;
+    cursor: pointer
+}
+
+.navbar .head .subtitle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-size: 1rem;
+    margin-top: .3125rem;
+    opacity: .8;
+    color: #00adb5;
+    color: var(--theme)
+}
+
+.navbar .head .subtitle i {
     font-size: 20px;
     font-size: 1.25rem;
     margin-right: .3125rem
