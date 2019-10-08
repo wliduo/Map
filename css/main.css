@@ -1169,7 +1169,7 @@ a.nya-btn:hover {
 
 .nya-container {
     position: relative;
-    padding: 2rem 2rem 1.5rem;
+    padding: 2rem 2rem;
     margin-bottom: 2.5rem;
     border: 4px solid;
     border: .25rem solid var(--t1)
