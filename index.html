@@ -52,10 +52,10 @@
                             <a href="https://dolyw.com/go?url=https://dolyw.com" title="我的主页" class="nya-btn hot"
                                 target="_blank">
                                 主页
-                            </a><a href="https://dolyw.com/go?url=https://blog.dolyw.com" title="我的博客"
-                                class="nya-btn" target="_blank">
+                            </a><a href="https://dolyw.com/go?url=https://blog.dolyw.com" title="我的博客" class="nya-btn"
+                                target="_blank">
                                 博客
-                            </a><a href="https://dolyw.com/go?url=https://note.dolyw.com" title="我的笔记" class="nya-btn" 
+                            </a><a href="https://dolyw.com/go?url=https://note.dolyw.com" title="我的笔记" class="nya-btn"
                                 target="_blank">
                                 笔记
                             </a><a href="https://dolyw.com/go?url=https://msg.dolyw.com" title="我的留言板" class="nya-btn"
@@ -95,8 +95,8 @@
 
                         <section class="nya-container">
                             <!-- <h2 class="nya-title"><span>我的收藏</span></h2> -->
-                            <a href="https://dolyw.com/go?url=https://one.dolyw.com" title="我的OnePiece"
-                                class="nya-btn" target="_blank">
+                            <a href="https://dolyw.com/go?url=https://one.dolyw.com" title="我的OnePiece" class="nya-btn"
+                                target="_blank">
                                 OnePiece(海贼小站)
                             </a><a href="https://dolyw.com/go?url=https://mikutap.dolyw.com" title="好玩的音符Mikutap"
                                 class="nya-btn" target="_blank">
@@ -187,7 +187,7 @@
                             <a href="https://dolyw.com/go?url=https://link.dolyw.com" title="旧的主页" class="nya-btn"
                                 target="_blank">
                                 旧的主页
-                            </a><a href="https://dolyw.com/go?url=https://blog2.dolyw.com" title="旧的博客" class="nya-btn" 
+                            </a><a href="https://dolyw.com/go?url=https://blog2.dolyw.com" title="旧的博客" class="nya-btn"
                                 target="_blank">
                                 旧的博客
                             </a>
@@ -259,7 +259,7 @@
 
         function start() {
             try {
-                // 步骤一: 创建异步对象
+                /* // 步骤一: 创建异步对象
                 var ajax = new XMLHttpRequest();
                 if (window.XMLHttpRequest) {
                     ajax = new XMLHttpRequest();
@@ -285,7 +285,17 @@
                     }
                 }
                 // 步骤四: 发送请求
-                ajax.send();
+                ajax.send(); */
+                $.ajax({
+                    url: "https://v1.hitokoto.cn",
+                    success: function (result) {
+                        // 重置索引i和文字
+                        i = 0;
+                        str = result.hitokoto;
+                        $('#author').html(result.from);
+                        typing();
+                    }
+                });
             } catch (err) {
                 $('#author').html('随心');
                 // 一开始默认给一个随机语句
@@ -295,7 +305,10 @@
             }
         }
 
-        start();
+        $(document).ready(function () {
+            start();
+        });
+
     </script>
 
     <script>
